@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Bestilling</title>
+    <Link rel="stylesheet" type="text/css" href="Bestilling.css">
+    <script src="Bestilling.js"></script>
+
+
+
+</head>
+<body>
+
+<h1>Bestilling</h1>
+
+
+<br>
+<br>
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bestill.html">Bestill <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Live_oppsett.html">Live Oppsett</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--SLUTT PÅ NAVBAR-->
+
+<br>
+<!-- TABELL FOR BESTILLINGEN -->
+<div class="row">
+    <div class="col">
+
+
+<table id="customerInfo">
+    <tr>
+        <td id="name">Navn: </td>
+        <td> <input id="nameField" type="text" name="nameField"></td>
+
+    </tr>
+    <tr>
+        <td id="date">Dato: </td>
+        <td> <input id="dateInput" type="datetime-local" name="dateInput"></td>
+
+    </tr>
+
+    <tr>
+        <td id="credit">Kredittkort nr: </td>
+        <td > <input id="creditField" type="text" name="creditField"></td>
+    </tr>
+    <tr>
+        <td id="expired">Utløpsdato: </td>
+        <td > <input id="expiredField" type="text" name="expiredField"></td>
+
+    </tr>
+    <tr>
+        <td id="cvn">cvn: </td>
+        <td > <input id="cvnField" type="text" name="cvnField"></td>
+
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><button class="button button5" id="VelgRetter"> Gå til Retter</button></td>
+    </tr>
+</table>
+      <!-- SLUTT FOR TABELL BESTILLING-->
+
+
+        <!--START PÅ TABELL FOR DELBESTILLIGER -->
+        <table id="mealInfo" style="display:none;">
+            <tr>
+                <td>Forrett: </td>
+                <td><select id="preMeal">
+                    <option value="None"></option>
+                    <option value="Fiskesuppe">Fiskesuppe</option>
+                    <option value="Dagens Suppe">Dagens Suppe</option>
+                    <option value="Cesar Salat">Cesar Salat</option>
+                    <option value="Spekemat">Spekemat</option>
+                    <option value="Risotto">Cesar Salat</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Hovedrett: </td>
+                <td><select id="mainMeal">
+                    <option value="None"></option>
+                    <option value="Biffsnadder">Biffsnadder</option>
+                    <option value="Laks">Laks</option>
+                    <option value="Smalahove">Smalahove</option>
+                    <option value="Husets kebab tallerken">Husets kebab tallerken</option>
+                    <option value="Chicken tandori">Chicken tandori</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td >Dessert: </td>
+                <td><select id="Dessert">
+                    <option value="None"></option>
+                    <option value="Sjokolade fondant">Sjokolade fondant</option>
+                    <option value="Brownies">Brownies</option>
+                    <option value="Napoleons Kake"> Napoleons Kake</option>
+                    <option value="Banansplitt">Banansplitt</option>
+                    <option value="iskrem med ferske jordbær"> Iskrem med ferske jordbær</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td >Drikke: </td>
+                <td><select id="drink">
+                    <option value="None"></option>
+                    <option value="Husets hvitvin">Husets hvitvin</option>
+                    <option value="Mont blanc">Mont blanc</option>
+                    <option value="Husets Rødvin">Husets rødvin</option>
+                    <option value="Cola">Cola</option>
+                    <option value="Pepsi max">Pepsi max</option>
+                </select></td>
+            </tr>
+            <tr>
+
+                <td id="guest">Antall gjester: </td>
+                <td > <input id="guestField" type="number" name="guestField" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+                <td >Bord: </td>
+                <td><select id="tableNr">
+                    <option value="0"></option>
+                    <option value="1">Bord 1</option>
+                    <option value="2">Bord 2</option>
+                    <option value="3">Bord 3</option>
+                    <option value="4">Bord 4</option>
+                    <option value="5">Bord 5</option>
+                    <option value="6">Bord 6</option>
+                    <option value="7">Bord 7</option>
+                    <option value="8">Bord 8</option>
+                    <option value="9">Bord 9</option>
+                </select></td>
+            </tr>
+        </table>
+        <br>
+        <button class="button button5" id="LeggTilBestilling" style="display:none;"> Legg til delbestilling</button>
+    </div>
+    <!--SLUTT FOR TABELL FOR MIDLERTIDIG BESTILLING AV MAT OG DRIKKE-->
+
+    <!--tilhører grid layout -->
+    <div class="col"></div>
+    <div class="col"> <div class="col"></div>
+        <div class="w-100"></div>
+        <div class="col">
+
+    <!-- Tabellen som viser hittil delbestillinger til en kunde-->
+            <table id="delBestillingsTabell" class="table table-inverse table-sm">
+                <thead>
+                <tr>
+                    <th>Gjest</th>
+                    <th>Forrett</th>
+                    <th>Hovedrett</th>
+                    <th>Dessert</th>
+                    <th>Drikke</th>
+                </tr>
+                </thead>
+                <tbody id="delBestillinger">
+
+                </tbody>
+            </table>
+
+            <table>
+            <td><button class="button button5" id="removeLastOrder" style="display:none;">Slett siste delbestilling</button></td>
+            <td><button class="button button5" id="SendButton" style="display:none;"> Send hele Bestilling </button></td>
+            </table>
+            <!-- slutt på Tabellen som viser hittil delbestillinger til en kunde-->
+        </div></div>
+    <div class="col"></div>
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

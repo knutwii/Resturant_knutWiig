@@ -1,0 +1,73 @@
+body{
+    background-color: #b3c1c6;
+}
+
+h1,h2{
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    color: #565f60;
+}
+
+#MenuHeader{
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    color: #565f60;
+    font-size: 40px;
+}
+
+#buttonShowMenu,#tilbakeButton{
+    width: 50%;
+    padding: 20px;
+    margin-left: 25%;
+    position: fixed;
+    text-align: center;
+
+}
+
+
+.button {
+
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button5 {
+    background-color: white;
+    color: #565f60;
+    border: 1.5px solid #565f60;
+}
+
+.button5:hover {
+    background-color: #565f60;
+    color: white;
+}
+
+.table-inverse{
+    background-color: whitesmoke;
+    color: #565f60;
+}
+.list-group-item.active{
+    background-color: #565f60;
+    border-color: black;
+}
+
+.hide-image {
+
+    display: none;
+}
+
+
+
+
